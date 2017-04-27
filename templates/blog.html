@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Blogs!</h2>
+you have been here {{visits}} times
+{% for blog in blogs %}
+    <div>
+    <a href=/blog/{{ blog.key().id()}}><h3>{{blog.title}}</h3></a> <br>
+        {{blog.blog_body}}
+    </div>
+{% endfor %}
+
+<p class="error">{{ error if error else "" }}</p>
+{% endblock %}

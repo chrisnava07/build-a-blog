@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Blogs!</h2>
+    <div>
+        <h3>{{blog.title}}</h3> <br>
+        {{blog.blog_body}}
+    </div>
+
+<p class="error">{{ error if error else "" }}</p>
+{% endblock %}

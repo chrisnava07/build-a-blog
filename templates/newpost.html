@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>New Post</h2>
+
+<form action="/newpost" method="post">
+    <label>
+        Title
+        <input type="text" name="title"/>
+    </label>
+    <br>
+    <label>
+        Post
+        <textarea name="post"></textarea>
+    </label>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+<p class="error">{{ error if error else "" }}</p>
+{% endblock %}
